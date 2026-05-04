@@ -30,24 +30,56 @@
         }
         .link-text {
             font-size: 1.2rem;
-            font-weight: 250; /* 320에서 250으로 더 얇게 깎아 세련미를 강조했습니다 */
+            font-weight: 250; /* 얇고 세련된 두께 */
             color: #1d1d1f;
             text-decoration: none;
             letter-spacing: 0.05em;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+            user-select: none; /* 텍스트 드래그 방지 */
         }
         .link-text:active, .link-text:hover {
             color: #86868b;
+        }
+        /* 이메일 폰트 크기를 살짝 줄여 한 줄에 예쁘게 담기도록 조절 */
+        #contact-target {
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- href="#" 자리에 나중에 이동할 링크를 넣으시면 됩니다 -->
-        <a href="#" class="link-text">Buy</a>
-        <a href="#" class="link-text">Contact</a>
+        <!-- Buy 버튼 -->
+        <a href="#" class="link-text" id="buy-btn">Buy</a>
+        
+        <!-- Contact / 이메일 전환 버튼 -->
+        <div class="link-text" id="contact-target" onclick="toggleContact()">Contact</div>
     </div>
+
+    <script>
+        // 현재 상태를 저장하는 변수
+        let isEmailVisible = false;
+
+        function toggleContact() {
+            const target = document.getElementById('contact-target');
+            
+            // 글자가 바뀔 때 투명도를 0으로 만들어 부드러운 전환 효과를 줍니다.
+            target.style.opacity = '0';
+            
+            setTimeout(() => {
+                if (!isEmailVisible) {
+                    target.innerText = 'miny6953@gmail.com';
+                    isEmailVisible = true;
+                } else {
+                    target.innerText = 'Contact';
+                    isEmailVisible = false;
+                }
+                // 글자 변경 후 다시 선명하게 만듭니다.
+                target.style.opacity = '1';
+            }, 200); // 0.2초 딜레이
+        }
+    </script>
 
 </body>
 </html>
