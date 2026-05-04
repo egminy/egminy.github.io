@@ -1,0 +1,2 @@
+# egminy
+simplified
