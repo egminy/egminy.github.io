@@ -7,7 +7,6 @@
     <!-- Pretendard 폰트 불러오기 -->
     <link rel="stylesheet" as="style" crossorigin href="https://jsdelivr.net" />
     <style>
-        /* 기본 여백 제거 및 화면 꽉 차게 설정 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -16,30 +15,27 @@
         body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* 스크롤 방지 */
+            overflow: hidden;
             background-color: #ffffff;
             font-family: 'Pretendard', -apple-system, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        /* 중앙 정렬 컨테이너 */
         .container {
             display: flex;
             flex-direction: column;
-            gap: 40px; /* 글자 사이의 넓은 여백 */
+            gap: 40px;
             text-align: center;
         }
-        /* 텍스트 링크 스타일 */
         .link-text {
             font-size: 1.2rem;
-            font-weight: 300; /* 얇은 두께로 세련되게 */
-            color: #1d1d1f; /* 부드러운 블랙 */
-            text-decoration: none; /* 밑줄 제거 */
-            letter-spacing: 0.05em; /* 자간을 넓혀 고급스럽게 */
+            font-weight: 400; /* 기존 300에서 400으로 변경하여 가독성을 높였습니다 */
+            color: #1d1d1f;
+            text-decoration: none;
+            letter-spacing: 0.05em;
             transition: color 0.3s ease;
         }
-        /* 터치하거나 마우스를 올렸을 때 은은하게 흐려지는 효과 */
         .link-text:active, .link-text:hover {
             color: #86868b;
         }
