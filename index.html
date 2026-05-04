@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Minimal</title>
+    <title>egminy</title>
     <style>
-        /* 기본 여백 제거 및 화면 꽉 차게 설정 */
+        /* 기본 여백 및 배경 설정 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,59 +15,43 @@
         body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* 스크롤 방지 */
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
             background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        /* 중앙 정렬 컨테이너 */
+        /* 중앙 텍스트 정렬 */
         .container {
-            width: 100%;
-            max-width: 320px; /* 모바일 폭에 맞춤 */
             display: flex;
             flex-direction: column;
-            gap: 16px; /* 버튼 사이 간격 */
-            padding: 20px;
+            gap: 40px; /* 글자 사이의 넓은 여백 */
+            text-align: center;
         }
-        /* 공통 버튼 스타일 */
-        .btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-            font-size: 1rem;
-            font-weight: 500;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: opacity 0.2s ease, transform 0.1s ease;
+        /* 링크 텍스트 스타일 (네모 테두리 없음) */
+        .link-text {
+            font-size: 1.2rem;
+            font-weight: 300; /* 얇은 폰트로 세련되게 */
+            color: #1d1d1f; /* 애플 특유의 부드러운 블랙 */
+            text-decoration: none; /* 밑줄 제거 */
+            letter-spacing: 0.05em; /* 자간을 넓혀 고급스럽게 */
+            transition: color 0.3s ease;
         }
-        /* 상단 검은색 Buy 버튼 */
-        .buy {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        /* 하단 흰색 Contact 버튼 */
-        .contact {
-            background-color: #ffffff;
-            color: #000000;
-            border: 1px solid #000000;
-        }
-        /* 터치 액션 효과 */
-        .btn:active {
-            opacity: 0.8;
-            transform: scale(0.98);
+        /* 터치하거나 마우스를 올렸을 때 은은하게 흐려지는 효과 */
+        .link-text:active, .link-text:hover {
+            color: #86868b;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- 클릭 시 이동할 링크 주소를 href="#" 부분에 넣으시면 됩니다 -->
-        <a href="#" class="btn buy">Buy</a>
-        <a href="#" class="btn contact">Contact</a>
+        <!-- href="#" 자리에 나중에 이동할 링크를 넣으시면 됩니다 -->
+        <a href="#" class="link-text">Buy</a>
+        <a href="#" class="link-text">Contact</a>
     </div>
 
 </body>
 </html>
+
